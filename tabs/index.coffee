@@ -13,18 +13,24 @@ export Tabs = ({ list, children, defaultChecked = 0 }) ->
       }
   name = 'ppz-tabs-' + uniqueName++
 
-  $(React.Fragment)()(
-    $.nav(className: 'ppz-ccs tabs') list.map((t,i) =>
-      $.label(className: 'ppz-ccs tab', key: i)(
-        $.span() t.name
-        $.input({ type: 'radio', name, defaultChecked: i==defaultChecked })()
+  $(React.Fragment,
+    $.nav({ className: 'ppz-ccs tabs' },
+      list.map((t,i) =>
+        $.label({ className: 'ppz-ccs tab', key: i },
+          $.span(t.name),
+          $.input({ type: 'radio', name, defaultChecked: i==defaultChecked })
+        )
       )
-    )
-    $.div(className: 'ppz-ccs tabs') list.map((t,i) =>
-      $(React.Fragment)(key: i) t.el
+    ),
+    $.div({ className: 'ppz-ccs tabs' },
+      list.map((t,i) =>
+        $(React.Fragment, { key: i }, t.el)
+      )
     )
   )
 
-export Tab = (props) -> pug"""
-  section.ppz-ccs.tab(...props)
-"""
+export Tab = ({ className, ...props }) ->
+  $.section {
+    className: 'ppz-ccs tab ' + className
+    ...props
+  }
