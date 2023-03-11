@@ -1,0 +1,23 @@
+{
+  "name": "@ppzp/css-components.rc",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ppz-pro/css-components.rc.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/ppz-pro/css-components.rc/issues"
+  },
+  "homepage": "https://github.com/ppz-pro/css-components.rc#readme",
+  "peerDependencies": {
+    "@ppzp/css-components": "file:../css-components",
+    "react": ">=16.8.0"
+  }
+}
