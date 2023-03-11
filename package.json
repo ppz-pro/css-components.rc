@@ -3,8 +3,7 @@
   "version": "0.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ppz-pro/css-components.rc.git"
@@ -18,6 +17,7 @@
   "homepage": "https://github.com/ppz-pro/css-components.rc#readme",
   "peerDependencies": {
     "@ppzp/css-components": "file:../css-components",
-    "react": ">=16.8.0"
+    "react": ">=16.8.0",
+    "utils.rc": "file:../utils.rc"
   }
 }

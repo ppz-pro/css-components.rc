@@ -1,4 +1,5 @@
 import React from 'react'
+import $ from 'utils.rc/$'
 import '@ppzp/css-components/tabs.css'
 
 uniqueName = 1
@@ -11,19 +12,18 @@ export Tabs = ({ list, children, defaultChecked = 0 }) ->
         el: children[index]
       }
   name = 'ppz-tabs-' + uniqueName++
-  <>
-    <nav className='ppz-ccs tabs'>
-      {list.map((t,i) =>
-        <label className='ppz-ccs tab' key={i}>
-          <span>{t.name}</span>
-          <input type='radio' name={name} defaultChecked={i===defaultChecked} />
-        </label>
-      )}
-    </nav>
-    <div className='ppz-ccs tabs'>
-      {list.map((t) => t.el)}
-    </div>
-  </>
+
+  $(React.Fragment)()(
+    $.nav(className: 'ppz-ccs tabs') list.map((t,i) =>
+      $.label(className: 'ppz-ccs tab', key: i)(
+        $.span() t.name
+        $.input({ type: 'radio', name, defaultChecked: i==defaultChecked })()
+      )
+    )
+    $.div(className: 'ppz-ccs tabs') list.map((t,i) =>
+      $(React.Fragment)(key: i) t.el
+    )
+  )
 
 export Tab = (props) -> pug"""
   section.ppz-ccs.tab(...props)
