@@ -17,7 +17,7 @@
   "homepage": "https://github.com/ppz-pro/css-components.rc#readme",
   "peerDependencies": {
     "react": ">=16.8.0",
-    "@ppzp/css-components": "^0.0.10",
-    "utils.rc": "^0.0.0"
+    "@ppzp/css-components": ">=0.0.0",
+    "@ppzp/utils.rc": ">=0.0.0"
   }
 }
