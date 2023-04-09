@@ -1,6 +1,6 @@
 {
   "name": "@ppzp/css-components.rc",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {},
@@ -16,8 +16,8 @@
   },
   "homepage": "https://github.com/ppz-pro/css-components.rc#readme",
   "peerDependencies": {
-    "react": ">=16.8.0",
     "@ppzp/css-components": ">=0.0.0",
-    "@ppzp/utils.rc": ">=0.0.0"
+    "@ppzp/utils.rc": ">=0.0.5",
+    "react": ">=16.8.0"
   }
 }
