@@ -35,6 +35,7 @@ export useTabs = ({ list, children, defaultChecked = 0 }) ->
               name
               type: 'radio'
               checked: i == checked
+              readOnly: true
               onClick: -> setChecked(i)
             })
           )
